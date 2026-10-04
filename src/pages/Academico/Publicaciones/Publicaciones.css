@@ -1,0 +1,589 @@
+.publicaciones-page {
+  padding: 28px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.publicaciones-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.publicaciones-header h1 {
+  margin: 5px 0 8px;
+  font-size: 30px;
+  color: #111827;
+}
+
+.publicaciones-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.section-kicker {
+  display: inline-block;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.publicaciones-primary-button,
+.publicaciones-secondary-button {
+  border: 0;
+  border-radius: 9px;
+  padding: 11px 17px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.publicaciones-primary-button {
+  background: #2563eb;
+  color: white;
+}
+
+.publicaciones-primary-button:hover {
+  background: #1d4ed8;
+}
+
+.publicaciones-secondary-button {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.publicaciones-secondary-button:hover {
+  background: #e2e8f0;
+}
+
+.publicaciones-alert {
+  border-radius: 9px;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.publicaciones-alert.error {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+.publicaciones-alert.success {
+  background: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.publicaciones-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #e2e8f0;
+  overflow-x: auto;
+}
+
+.publicaciones-tabs button {
+  border: 0;
+  background: transparent;
+  color: #64748b;
+  padding: 11px 13px;
+  cursor: pointer;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+}
+
+.publicaciones-tabs button.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+  font-weight: 700;
+}
+
+.publicaciones-tabs button span {
+  margin-left: 6px;
+  background: #f1f5f9;
+  padding: 2px 7px;
+  border-radius: 20px;
+  font-size: 11px;
+}
+
+.publicaciones-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.publicacion-row {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.publicacion-main {
+  min-width: 0;
+  flex: 1;
+}
+
+.publicacion-row-top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 9px;
+}
+
+.publicacion-type,
+.featured-badge,
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 4px 9px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.publicacion-type {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.featured-badge {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.status-badge.draft {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.status-badge.scheduled {
+  background: #fefce8;
+  color: #a16207;
+}
+
+.status-badge.published {
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+.status-badge.archived {
+  background: #f8fafc;
+  color: #64748b;
+}
+
+.publicacion-row h2 {
+  margin: 0 0 6px;
+  color: #111827;
+  font-size: 17px;
+}
+
+.publicacion-row p {
+  margin: 0 0 12px;
+  color: #64748b;
+  line-height: 1.5;
+  font-size: 13px;
+}
+
+.publicacion-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.publicacion-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.publicacion-actions button {
+  border: 1px solid #dbe3ee;
+  background: white;
+  color: #334155;
+  border-radius: 7px;
+  padding: 7px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.publicacion-actions button:hover {
+  background: #f8fafc;
+}
+
+.publicacion-actions button.danger {
+  color: #b91c1c;
+  border-color: #fecaca;
+}
+
+.publicaciones-empty {
+  background: white;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 55px 25px;
+  text-align: center;
+}
+
+.empty-icon {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #2563eb;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+}
+
+.publicaciones-empty h2 {
+  margin: 0 0 7px;
+  font-size: 19px;
+}
+
+.publicaciones-empty p {
+  margin: 0 0 18px;
+  color: #64748b;
+}
+
+.publicaciones-loading {
+  padding: 60px;
+  text-align: center;
+  color: #64748b;
+}
+
+/* ==========================================================
+   MODAL
+========================================================== */
+
+.publicaciones-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  z-index: 1000;
+  padding: 25px;
+  overflow-y: auto;
+}
+
+.publicaciones-modal {
+  width: min(850px, 100%);
+  margin: 20px auto;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 25px 70px rgba(15, 23, 42, 0.25);
+  overflow: hidden;
+}
+
+.modal-header {
+  padding: 20px 23px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.modal-header h2 {
+  margin: 4px 0 0;
+  font-size: 21px;
+  color: #111827;
+}
+
+.modal-close {
+  border: 0;
+  background: transparent;
+  font-size: 27px;
+  line-height: 1;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 23px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 17px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-field.full {
+  grid-column: 1 / -1;
+}
+
+.form-field > span {
+  color: #334155;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px 11px;
+  font-family: inherit;
+  font-size: 13px;
+  color: #1e293b;
+  background: white;
+  outline: none;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.form-field small {
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.featured-check {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  padding: 13px;
+  cursor: pointer;
+}
+
+.featured-check input {
+  margin-top: 3px;
+}
+
+.featured-check span {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.featured-check strong {
+  color: #334155;
+  font-size: 13px;
+}
+
+.featured-check small {
+  color: #64748b;
+  font-size: 11px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 9px;
+  padding: 16px 23px;
+  border-top: 1px solid #e2e8f0;
+}
+
+@media (max-width: 800px) {
+  .publicaciones-page {
+    padding: 18px;
+  }
+
+  .publicaciones-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .publicacion-row {
+    flex-direction: column;
+  }
+
+  .publicacion-actions {
+    justify-content: flex-start;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-field.full {
+    grid-column: auto;
+  }
+}
+/* =========================================================
+   RESPONSIVE - GESTIÓN DE PUBLICACIONES
+   ========================================================= */
+
+.publicaciones-page {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Cabecera */
+.publicaciones-page .page-header {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.publicaciones-page .page-header > div:first-child {
+  min-width: 0;
+  flex: 1 1 400px;
+}
+
+.publicaciones-page .page-header .primary-button {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .publicaciones-page .page-header {
+    gap: 16px;
+  }
+
+  .publicaciones-page .page-header h2 {
+    font-size: 28px;
+  }
+
+  .publicaciones-page .page-header p {
+    font-size: 15px;
+  }
+}
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .publicaciones-page {
+    padding: 20px 16px;
+  }
+
+  .publicaciones-page .page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .publicaciones-page .page-header > div:first-child {
+    width: 100%;
+    flex: none;
+  }
+
+  .publicaciones-page .page-header h2 {
+    font-size: 25px;
+    line-height: 1.2;
+  }
+
+  .publicaciones-page .page-header p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .publicaciones-page .page-header .primary-button {
+    width: 100%;
+    min-height: 46px;
+    justify-content: center;
+  }
+
+  /* Pestañas */
+  .publicaciones-page .tabs {
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .publicaciones-page .tabs::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  /* Tarjeta de publicación */
+  .publicaciones-page .publication-card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .publicaciones-page .publication-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .publicaciones-page .publication-card-actions button {
+    flex: 1 1 auto;
+  }
+}
+
+/* =========================================================
+   MÓVILES PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .publicaciones-page {
+    padding: 16px 12px;
+  }
+
+  .publicaciones-page .page-header h2 {
+    font-size: 23px;
+  }
+
+  .publicaciones-page .page-header .primary-button {
+    width: 100%;
+    min-height: 48px;
+    font-size: 15px;
+  }
+
+  .publicaciones-page .publication-card {
+    padding: 16px;
+  }
+
+  .publicaciones-page .publication-card-actions {
+    flex-direction: column;
+  }
+
+  .publicaciones-page .publication-card-actions button {
+    width: 100%;
+  }
+}

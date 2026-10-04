@@ -1,0 +1,337 @@
+.header {
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 24px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  position: relative;
+  z-index: 100;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-left {
+  gap: 12px;
+}
+
+.header-right {
+  gap: 20px;
+}
+
+/* =========================
+   BOTÓN MENÚ
+   ========================= */
+
+.menu-button {
+  display: none;
+
+  width: 38px;
+  height: 38px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: #f3f4f6;
+  color: #374151;
+
+  cursor: pointer;
+
+  font-size: 20px;
+}
+
+.menu-button:hover {
+  background: #e5e7eb;
+}
+
+/* =========================
+   SELECTOR DE MÓDULOS
+   ========================= */
+
+.module-switcher {
+  position: relative;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+}
+
+.module-button {
+  height: 40px;
+  min-width: 155px;
+
+  padding: 0 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 14px;
+
+  border: 1px solid #dbe3ef;
+  border-radius: 8px;
+
+  background: #f8fafc;
+  color: #1e3a8a;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.module-button:hover {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.module-name {
+  white-space: nowrap;
+}
+
+.module-arrow {
+  font-size: 13px;
+  color: #64748b;
+
+  transition: transform 0.2s ease;
+}
+
+.module-arrow.open {
+  transform: rotate(180deg);
+}
+
+/* =========================
+   DROPDOWN DE MÓDULOS
+   ========================= */
+
+.module-dropdown {
+  position: absolute;
+
+  top: 52px;
+  left: 0;
+
+  width: 250px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
+
+  overflow: hidden;
+
+  z-index: 2000;
+}
+
+.module-dropdown-title {
+  padding: 13px 16px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  color: #64748b;
+
+  background: #f8fafc;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.module-list {
+  padding: 6px 0;
+}
+
+.module-option {
+  width: 100%;
+  min-height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 9px 16px;
+
+  border: none;
+
+  background: #ffffff;
+
+  color: #334155;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.module-option:hover {
+  background: #f1f5f9;
+}
+
+.module-option.active {
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+.module-option-dot {
+  width: 9px;
+  height: 9px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #94a3b8;
+}
+
+.module-option.active .module-option-dot {
+  background: #2563eb;
+}
+
+/* =========================
+   NOTIFICACIONES
+   ========================= */
+
+.notification-button {
+  position: relative;
+
+  width: 38px;
+  height: 38px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  font-size: 20px;
+  color: #4b5563;
+}
+
+.notification-button:hover {
+  background: #f3f4f6;
+}
+
+.notification-dot {
+  position: absolute;
+
+  top: 8px;
+  right: 8px;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #ef4444;
+}
+
+/* =========================
+   USUARIO
+   ========================= */
+
+.user-menu {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.user-info strong {
+  display: block;
+
+  font-size: 13px;
+  color: #111827;
+}
+
+.user-info span {
+  display: block;
+
+  margin-top: 2px;
+
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.user-arrow {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+  .menu-button {
+    display: grid;
+    place-items: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .module-button {
+    min-width: 125px;
+    padding: 0 12px;
+  }
+
+  .module-dropdown {
+    width: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 0 14px;
+  }
+
+  .user-info,
+  .user-arrow {
+    display: none;
+  }
+
+  .header-right {
+    gap: 6px;
+  }
+}

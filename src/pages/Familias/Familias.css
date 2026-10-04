@@ -1,0 +1,1021 @@
+.familias-page {
+  width: 100%;
+}
+
+/* =========================================================
+   CABECERA
+========================================================= */
+
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.page-header h2 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.page-header p {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.primary-button {
+  min-height: 40px;
+  padding: 0 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+
+.primary-button:hover {
+  background: #1d4ed8;
+}
+
+.primary-button:active {
+  transform: translateY(1px);
+}
+
+/* =========================================================
+   FILTROS
+========================================================= */
+
+.familias-filters {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+
+  margin-bottom: 20px;
+  padding: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  min-width: 200px;
+}
+
+.filter-group.search-group {
+  flex: 0 1 650px;
+  max-width: 650px;
+}
+
+.filter-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* =========================================================
+   BUSCADOR
+========================================================= */
+
+.search-input {
+  width: 100%;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  overflow: hidden;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.search-input:focus-within {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.search-icon {
+  position: relative;
+
+  width: 42px !important;
+  min-width: 42px !important;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon::before {
+  content: '';
+
+  width: 12px;
+  height: 12px;
+
+  border: 1.7px solid #9ca3af;
+  border-radius: 50%;
+}
+
+.search-icon::after {
+  content: '';
+
+  position: absolute;
+
+  width: 6px;
+  height: 1.7px;
+
+  background: #9ca3af;
+
+  transform:
+    translate(5px, 5px)
+    rotate(45deg);
+
+  transform-origin: left center;
+}
+
+.search-input input {
+  flex: 1;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 0 14px 0 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #111827;
+
+  font-size: 13px;
+}
+
+.search-input input::placeholder {
+  color: #9ca3af;
+}
+
+/* =========================================================
+   TARJETA DE RESULTADOS
+========================================================= */
+
+.results-card {
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.results-header {
+  min-height: 68px;
+
+  padding: 16px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.results-header > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.results-header strong {
+  font-size: 14px;
+  color: #111827;
+}
+
+.results-header span {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* =========================================================
+   TABLA
+========================================================= */
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.familias-table {
+  width: 100%;
+  min-width: 950px;
+
+  border-collapse: collapse;
+}
+
+.familias-table thead {
+  background: #f9fafb;
+}
+
+.familias-table th {
+  height: 44px;
+
+  padding: 0 16px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  text-align: left;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  color: #6b7280;
+
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+
+  white-space: nowrap;
+}
+
+.familias-table td {
+  min-height: 58px;
+
+  padding: 12px 16px;
+
+  border-bottom: 1px solid #f1f5f9;
+
+  font-size: 13px;
+
+  color: #4b5563;
+
+  vertical-align: middle;
+}
+
+.familias-table tbody tr {
+  transition: background 0.12s ease;
+}
+
+.familias-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.familias-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================================
+   CÓDIGO FAMILIAR
+========================================================= */
+
+.family-code {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 4px 7px;
+
+  border-radius: 5px;
+
+  background: #f3f4f6;
+
+  color: #374151;
+
+  font-family:
+    Consolas,
+    Monaco,
+    monospace;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.family-name {
+  display: block;
+
+  color: #111827;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   RESPONSABLES
+========================================================= */
+
+.responsible-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  max-width: 260px;
+}
+
+.responsible-item {
+  display: block;
+
+  color: #374151;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.more-count {
+  width: fit-content;
+
+  padding: 2px 6px;
+
+  border-radius: 999px;
+
+  background: #f3f4f6;
+
+  color: #6b7280;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   CANTIDAD DE HIJOS
+========================================================= */
+
+.children-count {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 26px;
+
+  padding: 0 9px;
+
+  border-radius: 999px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   ESTADOS
+========================================================= */
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 25px;
+
+  padding: 0 9px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.status-activo {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.status-otro {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+/* =========================================================
+   BOTÓN VER
+========================================================= */
+
+.view-button {
+  min-height: 32px;
+
+  padding: 0 11px;
+
+  border: 1px solid #dbe3ef;
+  border-radius: 6px;
+
+  background: #ffffff;
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.view-button:hover {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+/* =========================================================
+   PAGINACIÓN
+========================================================= */
+
+.pagination {
+  min-height: 58px;
+
+  padding: 10px 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+
+  background: #ffffff;
+}
+
+.pagination-top {
+  border-top: none;
+}
+
+.pagination-info {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.pagination-info strong {
+  color: #374151;
+  font-weight: 600;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pagination-button {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+
+  background: #ffffff;
+  color: #4b5563;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background: #f3f4f6;
+}
+
+.pagination-button.active {
+  border-color: #2563eb;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-weight: 600;
+}
+
+.pagination-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   ESTADOS
+========================================================= */
+
+.loading-state {
+  min-height: 260px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+.empty-state {
+  height: 180px !important;
+
+  text-align: center !important;
+
+  color: #9ca3af !important;
+
+  font-size: 13px !important;
+}
+
+.empty-state strong {
+  color: #374151;
+}
+
+.error-message {
+  margin: 16px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #fecaca;
+  border-radius: 7px;
+
+  background: #fef2f2;
+
+  color: #b91c1c;
+
+  font-size: 13px;
+}
+
+.no-data {
+  padding: 20px;
+
+  border: 1px dashed #d1d5db;
+  border-radius: 8px;
+
+  color: #9ca3af;
+
+  text-align: center;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(15, 23, 42, 0.45);
+}
+
+.family-modal {
+  width: 100%;
+  max-width: 900px;
+  max-height: calc(100vh - 48px);
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 20px 45px rgba(15, 23, 42, 0.18);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   CABECERA MODAL
+========================================================= */
+
+.modal-header {
+  min-height: 78px;
+
+  padding: 18px 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-header h3 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.modal-header span {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+.close-button {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #f3f4f6;
+  color: #6b7280;
+
+  font-size: 22px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+/* =========================================================
+   CONTENIDO MODAL
+========================================================= */
+
+.modal-content {
+  padding: 22px;
+
+  overflow-y: auto;
+}
+
+.modal-content h4 {
+  margin: 0 0 18px;
+
+  color: #111827;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.section-title {
+  margin-top: 28px !important;
+}
+
+/* =========================================================
+   DATOS FAMILIA
+========================================================= */
+
+.family-detail-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 1px;
+
+  overflow: hidden;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+
+  background: #e5e7eb;
+}
+
+.family-detail-grid > div {
+  min-height: 72px;
+
+  padding: 13px 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 5px;
+
+  background: #ffffff;
+}
+
+.family-detail-grid span {
+  color: #9ca3af;
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.family-detail-grid strong {
+  color: #374151;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  word-break: break-word;
+}
+
+/* =========================================================
+   MIEMBROS
+========================================================= */
+
+.family-members-list {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+
+  overflow: hidden;
+}
+
+.family-member {
+  min-height: 68px;
+
+  padding: 12px 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  border-bottom: 1px solid #f1f5f9;
+
+  background: #ffffff;
+}
+
+.family-member:last-child {
+  border-bottom: none;
+}
+
+.member-main {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.member-main strong {
+  color: #111827;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.member-main span {
+  color: #9ca3af;
+
+  font-size: 11px;
+}
+
+.member-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  gap: 5px;
+}
+
+.member-tag {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 23px;
+
+  padding: 0 7px;
+
+  border-radius: 999px;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.member-tag.payment {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.member-tag.enrollment {
+  background: #f5f3ff;
+  color: #7c3aed;
+}
+
+.member-tag.emergency {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+/* =========================================================
+   HIJOS
+========================================================= */
+
+.family-children-list {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+
+  overflow: hidden;
+}
+
+.family-child {
+  min-height: 65px;
+
+  padding: 12px 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  border-bottom: 1px solid #f1f5f9;
+
+  background: #ffffff;
+}
+
+.family-child:last-child {
+  border-bottom: none;
+}
+
+.family-child > div {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.family-child strong {
+  color: #111827;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.family-child span {
+  color: #9ca3af;
+
+  font-size: 11px;
+}
+
+.child-status {
+  padding: 4px 8px;
+
+  border-radius: 999px;
+
+  background: #f3f4f6;
+
+  color: #6b7280 !important;
+
+  font-size: 10px !important;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .familias-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-group,
+  .filter-group.search-group {
+    width: 100%;
+    max-width: none;
+  }
+
+  .family-detail-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .family-member {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .member-tags {
+    justify-content: flex-start;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .page-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primary-button {
+    width: 100%;
+  }
+
+  .familias-filters {
+    padding: 14px;
+  }
+
+  .results-header {
+    padding: 14px 16px;
+  }
+
+  .pagination {
+    padding: 10px 12px;
+
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pagination-controls {
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding-bottom: 2px;
+  }
+
+  .family-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-overlay {
+    padding: 12px;
+  }
+
+  .family-modal {
+    max-height: calc(100vh - 24px);
+  }
+
+  .modal-header {
+    padding: 15px 16px;
+  }
+
+  .modal-content {
+    padding: 16px;
+  }
+
+  .family-child {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+}
